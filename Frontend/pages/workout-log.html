@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Logging | FitTrack</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/workout-log.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="dashboard-navbar">
+        <a href="../index.html" class="auth-logo">
+            FitTrack<span>.</span>
+        </a>
+
+        <a href="dashboard.html" class="logout-btn">
+            Dashboard
+        </a>
+    </header>
+
+    <main class="workout-log-page">
+
+        <!-- Page Heading -->
+        <section class="log-heading">
+            <p class="dashboard-tag">TRACK YOUR ACTIVITY</p>
+            <h1>Workout Logging</h1>
+            <p>Record your workouts and keep track of your activity.</p>
+        </section>
+
+        <!-- Main Content -->
+        <section class="log-container">
+
+            <!-- Workout Form -->
+            <div class="log-form-card">
+
+                <div class="log-card-heading">
+                    <span class="log-icon">🏋️</span>
+                    <div>
+                        <h2>Add Your Workout</h2>
+                        <p class="log-description">
+                            Enter your workout details below.
+                        </p>
+                    </div>
+                </div>
+
+                <form id="workoutLogForm">
+
+                    <div class="form-group">
+                        <label for="workoutName">Workout Name</label>
+                        <input
+                            type="text"
+                            id="workoutName"
+                            placeholder="Example: Push Day"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workoutDate">Workout Date</label>
+                        <input
+                            type="date"
+                            id="workoutDate"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duration">Duration (minutes)</label>
+                        <input
+                            type="number"
+                            id="duration"
+                            placeholder="Example: 45"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workoutNotes">Workout Notes</label>
+                        <textarea
+                            id="workoutNotes"
+                            placeholder="Write your workout details..."
+                            rows="4"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="auth-btn">
+                        Add Workout
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Workout History -->
+            <div class="workout-history-card">
+
+                <div class="log-card-heading">
+                    <span class="log-icon">📋</span>
+                    <div>
+                        <h2>Workout History</h2>
+                        <p class="log-description">
+                            Your recently recorded workouts will appear here.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="workoutHistory">
+                    <p class="empty-history">
+                        No workouts recorded yet.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/workout-log.js"></script>
+
+</body>
+</html>

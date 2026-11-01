@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan | FitTrack</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/diet.css">
+</head>
+<body>
+
+    <header class="dashboard-navbar">
+        <a href="../index.html" class="auth-logo">
+            FitTrack<span>.</span>
+        </a>
+
+        <a href="dashboard.html" class="logout-btn">
+            Dashboard
+        </a>
+    </header>
+
+    <main class="diet-page">
+
+        <section class="diet-heading">
+            <p class="dashboard-tag">YOUR DAILY NUTRITION</p>
+            <h1>Diet Plan</h1>
+            <p>Build balanced eating habits with simple meal suggestions.</p>
+        </section>
+
+        <!-- Nutrition Overview -->
+        <section class="nutrition-overview">
+
+            <div class="nutrition-card">
+                <span>🍎</span>
+                <h3>Balanced Meals</h3>
+                <p>Include different food groups.</p>
+            </div>
+
+            <div class="nutrition-card">
+                <span>💧</span>
+                <h3>Stay Hydrated</h3>
+                <p>Drink water regularly.</p>
+            </div>
+
+            <div class="nutrition-card">
+                <span>🥗</span>
+                <h3>Healthy Choices</h3>
+                <p>Choose varied, nutritious foods.</p>
+            </div>
+
+        </section>
+
+        <!-- Daily Meal Suggestions -->
+       
+<section class="meal-section">
+
+    <h2>Choose Your Fitness Goal</h2>
+
+    <select id="fitnessGoal">
+        <option value="">-- Select Your Goal --</option>
+        <option value="gain">Muscle Gain</option>
+        <option value="loss">Weight Management</option>
+        <option value="maintain">Maintain Weight</option>
+    </select>
+
+    <h2 id="planTitle">Select Your Fitness Goal</h2>
+
+    <div class="meal-grid" id="mealGrid"></div>
+
+</section>
+
+
+        <!-- Nutrition Tips -->
+        <section class="diet-tips">
+            <h3>💡 Nutrition Tips</h3>
+            <ul>
+                <li>Eat a variety of foods across the day.</li>
+                <li>Include protein-rich foods in your meals.</li>
+                <li>Drink water regularly, keep your body hydrated.</li>
+                <li>Keep your meals balanced and enjoyable.</li>
+                <li>Creatine is optional, not a compulsory daily nutrition tip.</li>
+                <li>Take Sufficient amount of protein after workout</li>
+                <li>Include seasonal fruits and green vegetables in your meals.</li>
+                <li>Choose whole grains like roti, oats and brown rice.</li>
+                <li>Avoid excessive junk food and sugary drinks.</li>
+                <li>Maintain regular and balanced meal timings.</li>
+            </ul>
+        </section>
+
+    </main>
+    <script src="../js/diet.js"></script>
+</body>
+</html>

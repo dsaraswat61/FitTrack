@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | FitTrack</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="dashboard-navbar">
+
+        <a href="../index.html" class="auth-logo">
+            FitTrack<span>.</span>
+        </a>
+
+        <a href="#" class="logout-btn" id="logoutBtn">
+            Logout <span>↗</span>
+        </a>
+
+    </header>
+
+
+    <main class="dashboard">
+
+        <!-- Welcome Section -->
+        <section class="dashboard-welcome">
+
+            <div class="welcome-content">
+                <p class="dashboard-tag">YOUR FITNESS OVERVIEW</p>
+
+                <h1 id="welcomeName">
+                    Welcome to FitTrack!
+                </h1>
+
+                <p>
+                    Every workout counts. Keep moving towards
+                    a stronger and healthier you.
+                </p>
+            </div>
+
+            <div class="welcome-decoration">
+                <span>💪</span>
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="dashboard-stats">
+
+            <div class="stat-card goal-card">
+
+                <div class="stat-top">
+                    <span class="stat-icon">🎯</span>
+                    <span class="stat-label">FITNESS TARGET</span>
+                </div>
+
+                <h3>Your Goal</h3>
+                <p>Not Set Yet</p>
+
+            </div>
+
+
+            <div class="stat-card streak-card">
+
+                <div class="stat-top">
+                    <span class="stat-icon">🔥</span>
+                    <span class="stat-label">CONSISTENCY</span>
+                </div>
+
+                <h3>Current Streak</h3>
+                <p id="dashboardStreak">0 Days</p>
+
+            </div>
+
+
+            <div class="stat-card workout-card">
+
+                <div class="stat-top">
+                    <span class="stat-icon">💪</span>
+                    <span class="stat-label">ACTIVITY</span>
+                </div>
+
+                <h3>Workouts</h3>
+                <p id="dashboardWorkouts">0 Completed</p>
+
+            </div>
+
+
+            <div class="stat-card duration-card">
+
+                <div class="stat-top">
+                    <span class="stat-icon">📊</span>
+                    <span class="stat-label">TOTAL TIME</span>
+                </div>
+
+                <h3>Progress</h3>
+                <p id="dashboardDuration">0 Minutes</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Fitness Tools -->
+        <section class="dashboard-actions">
+
+            <div class="section-heading">
+                <div>
+                    <p class="dashboard-tag">YOUR FITNESS COMPANION</p>
+                    <h2>Explore Your Fitness Tools</h2>
+                </div>
+            </div>
+
+
+            <a href="profile.html" class="action-card">
+
+            <div class="action-icon profile-tool">
+                👤
+            </div>
+
+            <h3>My Profile</h3>
+
+            <p>
+                View and update your personal details
+                and fitness information.
+            </p>
+
+            <span class="card-arrow">↗</span>
+
+        </a>
+
+            <div class="action-grid">
+
+                <a href="workout.html" class="action-card">
+
+                    <div class="action-icon workout-tool">
+                        🏋️
+                    </div>
+
+                    <h3>Workout Plan</h3>
+
+                    <p>
+                        Explore your workout routine and
+                        build strength consistently.
+                    </p>
+
+                    <span class="card-arrow">↗</span>
+
+                </a>
+
+
+                <a href="diet.html" class="action-card">
+
+                    <div class="action-icon diet-tool">
+                        🥗
+                    </div>
+
+                    <h3>Diet Plan</h3>
+
+                    <p>
+                        Discover healthy meal suggestions
+                        for your fitness goals.
+                    </p>
+
+                    <span class="card-arrow">↗</span>
+
+                </a>
+
+
+                <a href="progress.html" class="action-card">
+
+                    <div class="action-icon progress-tool">
+                        📈
+                    </div>
+
+                    <h3>Track Progress</h3>
+
+                    <p>
+                        Monitor your workouts and
+                        track your fitness journey.
+                    </p>
+
+                    <span class="card-arrow">↗</span>
+
+                </a>
+
+
+                <a href="bmi.html" class="action-card">
+
+                    <div class="action-icon bmi-tool">
+                        ⚖️
+                    </div>
+
+                    <h3>BMI Calculator</h3>
+
+                    <p>
+                        Calculate BMI and understand
+                        your daily calorie requirements.
+                    </p>
+
+                    <span class="card-arrow">↗</span>
+
+                </a>
+
+
+                <a href="workout-log.html" class="action-card">
+
+                    <div class="action-icon logging-tool">
+                        📝
+                    </div>
+
+                    <h3>Workout Logging</h3>
+
+                    <p>
+                        Record, manage and review
+                        your daily workout sessions.
+                    </p>
+
+                    <span class="card-arrow">↗</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Motivation Section -->
+        <section class="dashboard-motivation">
+
+            <div>
+                <span>⚡ YOUR DAILY REMINDER</span>
+
+                <h2>Progress takes consistency.</h2>
+
+                <p>
+                    Stay focused, trust the process
+                    and keep showing up.
+                </p>
+            </div>
+
+            <div class="motivation-icon">
+                🏆
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/dashboard.js"></script>
+
+</body>
+</html>

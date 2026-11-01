@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | FitTrack</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+
+    <header class="profile-navbar">
+        <a href="../index.html" class="auth-logo">
+            FitTrack<span>.</span>
+        </a>
+
+        <a href="dashboard.html" class="back-link">
+            ← Dashboard
+        </a>
+    </header>
+
+    <main class="profile-container">
+
+        <section class="profile-heading">
+            <p class="profile-tag">ACCOUNT SETTINGS</p>
+            <h1>My Profile</h1>
+            <p>Manage your personal and fitness information.</p>
+        </section>
+
+        <section class="profile-card">
+
+            <div class="profile-avatar">👤</div>
+
+            <h2 id="profileDisplayName">Your Profile</h2>
+            <p>Update your information below.</p>
+
+            <form id="profileForm">
+
+                <div class="profile-form-grid">
+
+                    <div class="profile-field">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+
+                    <div class="profile-field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="profile-field">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" min="1" max="120" required>
+                    </div>
+
+                    <div class="profile-field">
+                        <label for="height">Height (cm)</label>
+                        <input type="number" id="height" min="1" step="0.1" required>
+                    </div>
+
+                    <div class="profile-field">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" min="1" step="0.1" required>
+                    </div>
+
+                    <div class="profile-field">
+                        <label for="sex">Sex</label>
+                        <select id="sex" required>
+                            <option value="">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="profile-save-btn">
+                    Save Changes
+                </button>
+
+                <p id="profileMessage" class="profile-message"></p>
+
+            </form>
+
+        </section>
+
+        <p class="profile-note">
+            Note: Password changes are managed separately.
+        </p>
+
+    </main>
+
+    <script src="../js/profile.js"></script>
+
+</body>
+</html>

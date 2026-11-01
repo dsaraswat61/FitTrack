@@ -1,0 +1,257 @@
+
+/* =====================================
+   WORKOUT LOGGING PAGE
+===================================== */
+
+.workout-log-page {
+    background: #f5f6f4;
+    min-height: 100vh;
+    padding: 55px 6%;
+    box-sizing: border-box;
+}
+
+.log-heading {
+    margin-bottom: 40px;
+}
+
+.log-heading h1 {
+    color: #181a19;
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.log-heading > p:last-child {
+    color: #707572;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =====================================
+   MAIN LAYOUT
+===================================== */
+
+.log-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* =====================================
+   FORM AND HISTORY CARDS
+===================================== */
+
+.log-form-card,
+.workout-history-card {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.log-form-card h2,
+.workout-history-card h2 {
+    color: #181a19;
+    font-size: 22px;
+    margin: 0 0 8px;
+}
+
+/* Card Heading */
+
+.log-card-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.log-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    background: #fff0e8;
+    border-radius: 11px;
+    font-size: 22px;
+}
+
+.log-description {
+    color: #707572;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =====================================
+   FORM FIELDS
+===================================== */
+
+.log-form-card .form-group {
+    margin-bottom: 20px;
+}
+
+.log-form-card .form-group label {
+    display: block;
+    color: #181a19;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.log-form-card .form-group input,
+.log-form-card .form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #e2e5e2;
+    border-radius: 9px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    color: #181a19;
+    background: #ffffff;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.log-form-card .form-group input:focus,
+.log-form-card .form-group textarea:focus {
+    border-color: #ff7a3d;
+    box-shadow: 0 0 0 3px rgba(255, 122, 61, 0.10);
+}
+
+.log-form-card .form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+/* =====================================
+   ADD WORKOUT BUTTON
+===================================== */
+
+.log-form-card button.auth-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 9px;
+    background: #181a19;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.log-form-card button.auth-btn:hover {
+    background: #ff7a3d;
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   EMPTY HISTORY
+===================================== */
+
+.empty-history {
+    background: #fff7f2;
+    padding: 30px 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: #707572;
+    font-size: 14px;
+    border: 1px dashed #f3d9ca;
+}
+
+/* =====================================
+   SAVED WORKOUT HISTORY
+===================================== */
+
+.logged-workout {
+    background: #fff7f2;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: 1px solid #f3e5dc;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow-wrap: anywhere;
+}
+
+.logged-workout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.logged-workout h3 {
+    color: #181a19;
+    font-size: 17px;
+    margin: 0 0 12px;
+}
+
+.logged-workout p {
+    color: #707572;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 6px;
+}
+
+/* Delete Button */
+
+.delete-workout {
+    background: #181a19;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    padding: 9px 16px;
+    margin-top: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.delete-workout:hover {
+    background: #ff7a3d;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+    .log-container {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 600px) {
+    .workout-log-page {
+        padding: 35px 5%;
+    }
+
+    .log-heading h1 {
+        font-size: 28px;
+    }
+
+    .log-form-card,
+    .workout-history-card {
+        padding: 24px 20px;
+    }
+
+    .log-form-card h2,
+    .workout-history-card h2 {
+        font-size: 20px;
+    }
+
+    .log-card-heading {
+        gap: 11px;
+    }
+}

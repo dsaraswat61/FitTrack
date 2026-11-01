@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Progress Tracking | FitTrack</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/progress.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="dashboard-navbar">
+
+        <a href="../index.html" class="auth-logo">
+            FitTrack<span>.</span>
+        </a>
+
+        <a href="dashboard.html" class="logout-btn">
+            Dashboard
+        </a>
+
+    </header>
+
+
+    <main class="progress-page">
+
+        <!-- Page Heading -->
+        <section class="progress-heading">
+
+            <p class="dashboard-tag">YOUR FITNESS JOURNEY</p>
+
+            <h1>Track Your Progress</h1>
+
+            <p>
+                Review your workouts and monitor your weight changes.
+            </p>
+
+        </section>
+
+
+        <!-- Workout Statistics -->
+        <section class="progress-stats">
+
+            <div class="progress-card">
+
+                <span>🏋️</span>
+
+                <h3>Total Workouts</h3>
+
+                <p id="totalWorkouts">0</p>
+
+            </div>
+
+
+            <div class="progress-card">
+
+                <span>⏱️</span>
+
+                <h3>Total Workout Time</h3>
+
+                <p id="totalDuration">0 min</p>
+
+            </div>
+
+
+            <div class="progress-card">
+
+                <span>📅</span>
+
+                <h3>Latest Workout</h3>
+
+                <p id="latestWorkout">Not Available</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Workout History -->
+        <section class="progress-history">
+
+            <h2>🏋️ Your Workout Activity</h2>
+
+            <p class="progress-description">
+                Your saved workout records will appear here.
+            </p>
+
+            <div id="progressHistory">
+
+                <p class="empty-progress">
+                    No workout activity available yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Weight Tracking -->
+        <section class="progress-history">
+
+            <h2>⚖️ Weight Tracking</h2>
+
+            <p class="progress-description">
+                Record your weight regularly and monitor your changes.
+            </p>
+
+
+            <!-- Latest Weight -->
+            <div class="progress-card">
+
+                <span>⚖️</span>
+
+                <h3>Latest Recorded Weight</h3>
+
+                <p id="latestWeight">Not Available</p>
+
+            </div>
+
+
+            <!-- Weight Form -->
+            <div class="bmi-form-card">
+
+                <h3>Record Your Weight</h3>
+
+                <form id="weightForm">
+
+                    <div class="form-group">
+
+                        <label for="weightInput">
+                            Weight (kg)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="weightInput"
+                            placeholder="Example: 68.5"
+                            min="0.1"
+                            step="0.1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="weightDate">
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="weightDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button type="submit" class="auth-btn">
+                        Save Weight
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Weight History -->
+            <h3>Weight History</h3>
+
+            <div id="weightHistory">
+
+                <p class="empty-progress">
+                    No weight records available yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Weight Progress Chart -->
+        <section class="progress-history">
+
+            <h2>📈 Weight Progress</h2>
+
+            <p class="progress-description">
+                Visualise how your recorded weight changes over time.
+            </p>
+
+            <div class="progress-chart-container">
+
+                <canvas id="weightChart"></canvas>
+
+                <p id="weightChartMessage" class="empty-progress" hidden>
+                    Add at least one weight record to view your chart.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Workout Activity Chart -->
+        <section class="progress-history">
+
+            <h2>📊 Workout Activity</h2>
+
+            <p class="progress-description">
+                Compare your total workout duration across different days.
+            </p>
+
+            <div class="progress-chart-container">
+
+                <canvas id="workoutChart"></canvas>
+
+                <p id="workoutChartMessage" class="empty-progress" hidden>
+                    Add workouts to view your activity chart.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Progress Reminder -->
+        <section class="progress-note">
+
+            <h3>⚡ Keep Going!</h3>
+
+            <p>
+                Consistency matters. Keep recording your workouts
+                and weight to monitor your fitness journey.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/progress.js"></script>
+
+</body>
+</html>
